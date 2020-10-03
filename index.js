@@ -10,12 +10,20 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
-}
+  var random = Math.random()*100
+  var floor = Math.floor(random)
+  var update = {itemName: (item), itemPrice: (floor)}
+  cart.push(update)
+  return `${item} has been added to your cart.`
+  }
 
 function viewCart() {
-  // write your code here
-}
+  var list = []
+  for (let i = 0; i < cart.length; i++){
+  if (cart.length === 0){ return `Your shopping cart is empty.`}
+   else if (cart.length === [i]) {list.push(cart[i])};
+    else (return `In your cart, you have ${list}.`)
+  }
 
 function total() {
   // write your code here
